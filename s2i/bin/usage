@@ -1,0 +1,21 @@
+#!/bin/bash -e
+cat <<EOF
+This is the angular-nodeproxy-centos7 S2I image:
+
+This image is intended to angular applications served by a node server, which also acts as a proxy for angular API calls.
+
+To use it, install S2I: https://github.com/openshift/source-to-image
+
+Sample invocation:
+
+s2i build angular-nodeproxy-centos7 <application image>
+
+Build environment variables:
+
+ANGULAR_SOURCE_DIR: a directory relative to source folder which contains the angular source. If not specified, ./ is used
+PROXY_SOURCE_DIR: a directory relative to source folder which contains the node script to launch application. If not specified, ./server is used.
+PROXY_SCRIPT: name of main node script. If not specified, server.js is used.
+
+You can then run the resulting image via:
+docker run <application image>
+EOF

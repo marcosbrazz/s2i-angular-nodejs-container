@@ -1,0 +1,16 @@
+#!/bin/sh -e
+#
+# S2I save-artifacts script for the 'angular-nodeproxy-centos7' image.
+# The save-artifacts script streams a tar archive to standard output.
+# The archive contains the files and folders you want to re-use in the next build.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+# ANGULAR_SOURCE_DIR=${ANGULAR_SOURCE_DIR:-./}
+# PROXY_SOURCE_DIR=${PROXY_SOURCE_DIR:-server}
+
+# if [ -d "${HOME}/${ANGULAR_SOURCE_DIR}/node_modules" ] && [ "$(ls "${HOME}/${ANGULAR_SOURCE_DIR}/node_modules" 2>/dev/null)" ] && \
+#    [ -d "${HOME}/${PROXY_SOURCE_DIR}/node_modules" ] && [ "$(ls "${HOME}/${PROXY_SOURCE_DIR}/node_modules" 2>/dev/null)" ]; then
+#     tar -C "${HOME}" -cf - ${ANGULAR_SOURCE_DIR}/node_modules ${PROXY_SOURCE_DIR}/node_modules
+# fi
